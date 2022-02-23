@@ -26,3 +26,23 @@ export default function Input(props){
         </div>
     )
 }
+
+/***
+ * 
+ * <Checkbox
+              id={"noOftravellers"}
+              label="No Of Travellers"
+              onInputChange={(e)=>{console.log(e);
+                formik.handleChange(e)}}
+              onInputBlur={formik.handleBlur}
+              value={formik.values.journey.nooftravellers}
+              name="journey.nooftravellers"
+              validate={(values)=>{
+                if(!values){
+                  return "source cannot be empty";
+                }
+            }}
+            required={true}
+            />
+ * 
+ */

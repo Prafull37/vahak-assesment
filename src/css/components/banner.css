@@ -1,0 +1,10 @@
+.banner-wrapper{
+    width:100%;
+    background-color: blueviolet;
+    height:10rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    font-size: 2rem;
+}

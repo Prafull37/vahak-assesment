@@ -22,4 +22,15 @@ export default function FormContainer(props){
     </Formik>)
 }
 
+/***
+ * <FormContainer
+      name="journey">
+        {
+          (formik) =>{
+            console.log("formik",formik)
+          }
+        }
+      </FormContainer>
+ */
+
 
