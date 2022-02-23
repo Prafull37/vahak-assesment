@@ -6,7 +6,7 @@ export default function InfoComponent(props){
         <div className="info-container">
             <div className="headingContainer">
                 <span className="info-heading">Journey</span>
-                <EditButton/>
+                <EditButton onClick={props.onClick}/>
             </div>
             <div className="details-container">
                 <div className="left">
@@ -30,6 +30,6 @@ export  function DetailsText(props){
 
 export const EditButton=(props)=>{
     return (
-        <span className="edit-button"><i className="fa fa-pencil"></i> Edit</span>
+        <span className="edit-button" onClick={props.onClick}><i className="fa fa-pencil"></i> Edit</span>
     )
 }

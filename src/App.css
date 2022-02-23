@@ -24,4 +24,5 @@
 .edit-button{
   font-size: 14px;
   color:#0069d9;
+  cursor: pointer;
 }
