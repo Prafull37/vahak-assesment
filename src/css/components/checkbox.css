@@ -1,0 +1,10 @@
+.checkbox{
+    height:20px;
+    width: 17px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.checkbox-label{
+    vertical-align: middle;
+}

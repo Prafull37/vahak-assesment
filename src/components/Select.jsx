@@ -3,7 +3,7 @@ import TextError from './TextError';
 import '../css/components/select.css';
 
 export default function Select(props){
-    const {name,type,id,validate,onInputChange,onInputBlur,value,classes,style,required=false,optionData} = props;
+    const {name,id,validate,onInputChange,onInputBlur,value,classes,style,required=false,optionData} = props;
     const inputClass = !!classes ? classes:"";
     const validation={};
 
@@ -17,7 +17,6 @@ export default function Select(props){
             className={`label ${props.labelClasses}`}>{props.label}{required?<span className="star">*</span>:""}</label>
             <Field 
                 name={name}
-                type={type}
                 id={id}
                 className ={`select ${inputClass}`}
                 onChange={onInputChange}
@@ -43,3 +42,30 @@ const Options = props=>{
         </option>
     ))
 }
+
+/***
+ * 
+ * 
+ * const optionData={
+  common:{},
+  options:[{text:"HatchBack",value:"hb"},{text:"SUV",value:"suv"},{text:"Sedan",value:"sedan"}]
+}
+
+ * 
+ * <Select
+              id={"cartype"}
+              label="Car Type"
+              onInputChange={(e)=>{console.log(e);
+                formik.handleChange(e)}}
+              onInputBlur={formik.handleBlur}
+              value={formik.values.journey.cartype}
+              name="journey.cartype"
+              validate={(values)=>{
+                if(!values){
+                  return "source cannot be empty";
+                }
+            }}
+            optionData={optionData}
+            required={true}
+            />
+ */

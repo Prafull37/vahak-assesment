@@ -1,13 +1,9 @@
 
 import './App.css';
 import FormContainer from './components/FormContainer';
-import Select from "./components/Select";
+import Checkbox from "./components/Checkbox";
 
 
-const optionData={
-  common:{},
-  options:[{text:"HatchBack",value:"hb"},{text:"SUV",value:"suv"},{text:"Sedan",value:"sedan"}]
-}
 
 function App() {
   return (
@@ -17,20 +13,19 @@ function App() {
         {
           (formik) =>{
             console.log("formik",formik)
-            return (<Select
-              id={"cartype"}
-              label="Car Type"
+            return (<Checkbox
+              id={"noOftravellers"}
+              label="No Of Travellers"
               onInputChange={(e)=>{console.log(e);
                 formik.handleChange(e)}}
               onInputBlur={formik.handleBlur}
-              value={formik.values.journey.cartype}
-              name="journey.cartype"
+              value={formik.values.journey.nooftravellers}
+              name="journey.nooftravellers"
               validate={(values)=>{
                 if(!values){
                   return "source cannot be empty";
                 }
             }}
-            optionData={optionData}
             required={true}
             />)
           }
