@@ -1,0 +1,23 @@
+.button{
+    width:100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    padding:16px;
+    font-weight: 500;
+}
+
+.button-active{
+    background-color: #0069d9;
+    border:#0062cc;
+    color:white;
+}
+
+.button-disabled{
+    color:#0069d9;
+    cursor:none;
+    border:rgba(105, 104, 104, 0.42);
+    background-color:rgba(106, 105, 105, 0.42);
+    opacity: 0.6;
+    
+}

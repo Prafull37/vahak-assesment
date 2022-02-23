@@ -1,14 +1,14 @@
 
 import './App.css';
 import FormContainer from './components/FormContainer';
-import Header from "./components/Header";
+import Button from "./components/Button";
 
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Button disabled={false} text="Enter Your Bid" />
    
     </div>
   );
