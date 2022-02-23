@@ -1,14 +1,22 @@
 
 import './App.css';
 import FormContainer from './components/FormContainer';
-import ReactOtp from "./components/ReactOtp";
+import CurrencyInput from "./components/CurrencyInput";
 
 
 
 function App() {
+
   return (
     <div className="App">
-      <ReactOtp  title="Something" />
+     <FormContainer
+      name="journey">
+        {
+          (formik) =>{
+            return <CurrencyInput />
+          }
+        }
+      </FormContainer> 
 
     </div>
   );

@@ -4,13 +4,13 @@ import "../css/components/input.css";
 
 export default function Input(props){
 
-    const {name,type,id,validate,onInputChange,onInputBlur,value,classes,style,required} = props;
+    const {name,type,id,validate,onInputChange,onInputBlur,value,classes,style,required,placeholder=""} = props;
     const inputClass = !!classes ? classes:"";
 
     return (
         <div className={`input-wrapper ${props.wrapperClasses}`}>
             <label htmlFor={props.id}
-            className={`label ${props.labelClasses}`}>{props.label}{required?<span className="star">*</span>:""}</label>
+            className={`label ${props.labelClasses || ""}`}>{props.label}{required?<span className="star">*</span>:""}</label>
             <Field 
                 name={name}
                 type={type}
@@ -19,9 +19,11 @@ export default function Input(props){
                 validate={validate}
                 onChange={onInputChange}
                 onBlur={onInputBlur}
+                placeholder={placeholder}
                 value={value}
                 style={style}
             />
+            {!!props.middleComponent && props.middleComponent}
             <TextError name={props.name}/>
         </div>
     )

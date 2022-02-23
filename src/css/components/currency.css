@@ -1,0 +1,23 @@
+.border-bottom-input{
+    border:none !important;
+    outline: none;
+    font-size: 40px;
+    padding:0px  !important;
+    max-width: 50px;
+    border-radius: 0 !important;
+    vertical-align: middle;
+}
+
+.border-bottom-input:active,
+.border-bottom-input:focus{
+    border-bottom:1px solid black !important;
+}
+
+.currency-label{
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: none !important;
+    margin-right:12px;
+    vertical-align: middle;
+}
