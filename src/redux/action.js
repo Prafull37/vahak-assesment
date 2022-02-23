@@ -1,16 +1,16 @@
 export const FETCH_DETAILS = "FETCH_DETAILS";
 export const ADD_DETAILS =" ADD_DETAILS";
 
-export const fetchDetails=(action)=>{
+export const fetchDetails=(name)=>{
     return {
         type:FETCH_DETAILS,
-        name:action.name
+        name:name
     }
 }
 
-export const addDetails=(action)=>{
+export const addDetails=(payload)=>{
     return {
         type:FETCH_DETAILS,
-        payload:action.payload
+        payload:payload
     }
 }   

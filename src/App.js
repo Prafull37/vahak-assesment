@@ -1,10 +1,19 @@
 
 import './App.css';
-
+import FormContainer from './components/FormContainer';
 function App() {
   return (
     <div className="App">
-     Hello woRLD
+      <FormContainer
+      name="journey">
+        {
+          (formik) =>{
+            console.log(formik)
+            return (<div>Hello World</div>)
+          }
+        }
+      </FormContainer>
+   
     </div>
   );
 }
