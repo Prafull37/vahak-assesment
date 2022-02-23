@@ -1,14 +1,14 @@
 
 import './App.css';
 import FormContainer from './components/FormContainer';
-import InfoComponent from "./components/InfoComponent";
+import ReactOtp from "./components/ReactOtp";
 
 
 
 function App() {
   return (
     <div className="App">
-      <InfoComponent  />
+      <ReactOtp  title="Something" />
 
     </div>
   );
