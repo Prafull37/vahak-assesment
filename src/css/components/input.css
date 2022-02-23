@@ -1,0 +1,19 @@
+.input-wrapper{
+    position:relative;
+    top:0;
+    left:0;
+}
+
+.input-wrapper .input{
+    border-radius: 8px;
+    padding:12px;
+    border:1px solid rgb(158, 149, 149);
+}
+
+.input-wrapper label{
+    position: absolute;
+    top: -7px;
+    left: 12px;
+    font-size: 12px;
+    background-color: white;
+}
