@@ -1,15 +1,15 @@
 
 import './App.css';
 import FormContainer from './components/FormContainer';
-import Button from "./components/Button";
+import InfoComponent from "./components/InfoComponent";
 
 
 
 function App() {
   return (
     <div className="App">
-      <Button disabled={false} text="Enter Your Bid" />
-   
+      <InfoComponent  />
+
     </div>
   );
 }

@@ -1,0 +1,39 @@
+.info-container{
+    width:70%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.headingContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size:14px;
+}
+
+.info-heading{
+    color:rgb(158, 154, 154)
+}
+
+
+.details-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.details-container .left,
+.details-container .right{
+    width:50%; 
+}
+
+.details-container .right{
+    text-align: right;
+}
+
+.details-text{
+    margin:4px 0;
+    font-size:16px;
+    font-weight: bold;
+}
