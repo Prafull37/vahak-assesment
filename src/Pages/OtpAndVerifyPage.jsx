@@ -27,7 +27,7 @@ export default function OtpAndVerifyPage(props) {
             rightChild={<Rupee label={price.amount} fontSize={"32px"} />}
         />
         <Divider hide={false} />
-        {props.showOtp && (<>
+        {props.showOtp && (<div style={{textAlign:'center'}}>
             <ReactOtp
                 title={<TitleText mobileNo="123232232" onClick={() => { props.onButtonClick("contact") }} />}
                 validateAndSubmit={(otp) => {
@@ -38,7 +38,7 @@ export default function OtpAndVerifyPage(props) {
             />
             <Divider hide={true}/>
             <a href="https://github.com" target="_blank" rel="noreferrer"style={{color:"#0069d9",textDecoration:"underline"}}>Resend OTP</a>
-        </>)}
+        </div>)}
         <Button
             disabled={false}
             text={props.buttonLabel}

@@ -25,7 +25,7 @@
 }
 
 .travellers{
-    width: 95% !important;
+    width: 84% !important;
 }
 
 .normal .button{
@@ -33,7 +33,7 @@
 }
 
 .select-class{
-    width:103% !important;
+    width:92% !important;
 }
 
 @media only screen and (min-width:768px) {
@@ -61,7 +61,11 @@
     }
 
     .select-class{
-        width:99% !important;
+        width:101% !important;
+    }
+
+    .travellers{
+        width: 94% !important;
     }
     
 }
