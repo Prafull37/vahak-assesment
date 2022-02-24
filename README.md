@@ -1,3 +1,22 @@
+
+Launch This App from below link:- 
+
+[Vahak-assesment](https://tender-cray-105d42.netlify.app)
+
+### Technology Used:-
+* React
+* Javascript
+* HTML
+* CSS
+
+### Library Used:-
+* Formik
+* YUP
+* Redux
+* React-Redux
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
