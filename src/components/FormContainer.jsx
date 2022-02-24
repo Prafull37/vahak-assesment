@@ -10,7 +10,7 @@ export default function FormContainer(props){
     console.log("init",initState)
     return (<Formik
             initialValues={initState}
-            onSubmit
+            onSubmit={onSubmit}
             enableReinitialize
         >
             {(formik)=><Form>

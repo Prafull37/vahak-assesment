@@ -10,7 +10,7 @@ export const fetchDetails=(name)=>{
 
 export const addDetails=(payload)=>{
     return {
-        type:FETCH_DETAILS,
+        type:ADD_DETAILS,
         payload:payload
     }
 }   

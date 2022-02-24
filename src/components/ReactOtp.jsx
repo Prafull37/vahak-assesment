@@ -12,6 +12,7 @@ export default function ReactOtp(props){
 
     useEffect(()=>{
         if(myotp.length===4){
+          console.log("Yay")
             props.validateAndSubmit(myotp);
         }
     },[myotp])

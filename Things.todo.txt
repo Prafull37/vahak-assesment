@@ -1,11 +1,23 @@
 1.) Data Handling With Redux Per Page;
+    - on Click of Button Send all the data to redux store
     - Journey
-        - on Click of Button Send all the data to redux store
+        -Handle all the datas
+    - Price
+        - Price
+        - Rate Negotiation
+    - Contact
+        -No
+        -Name
+        -Remarks
 2.) InterPage communication 
+    - Fech all the submitted data and show as information
+    - Contact <-> Price
+        -Rate Negotiation
 3.) Parent To CHild communication
         - If all condition Satisfied then enable the Buton
-4.) Retrieving Saved Data from Redux
 5.) Field Level Validation
     - Journey 
         -If Suv Selected then No of travellers cannot be more than 4 and for rest 6.
 6.) Page Level Validation
+4.) Retrieving Saved Data from Redux
+        - onclick of edit show those pages with loaded data

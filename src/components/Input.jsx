@@ -4,7 +4,7 @@ import "../css/components/input.css";
 
 export default function Input(props){
 
-    const {name,type,id,validate,onInputChange,onInputBlur,value,classes,style,required,placeholder=""} = props;
+    const {name,type="text",id,validate,onInputChange,onInputBlur,value,classes,style,required,placeholder="",max} = props;
     const inputClass = !!classes ? classes:"";
 
     return (
@@ -22,6 +22,7 @@ export default function Input(props){
                 placeholder={placeholder}
                 value={value}
                 style={style}
+                max={max}
             />
             {!!props.middleComponent && props.middleComponent}
             <TextError name={props.name}/>

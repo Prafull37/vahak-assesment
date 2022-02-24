@@ -11,7 +11,7 @@ const initState={
             amount:0,
             negotiable:false
         },
-        user:{
+        contact:{
             name:"",
             mobileNo:"",
             updateonwp:"",
@@ -28,6 +28,7 @@ export default function detailReducer(state=initState,action){
         }
 
         case ADD_DETAILS:{
+            console.log("Cont",state)
             return {...state,...action.payload}
         }
         default:

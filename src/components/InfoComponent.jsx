@@ -33,9 +33,8 @@ export const EditButton=(props)=>{
 }
 
 
-export const makeChildFromArray=(props)=>{
-    let data=[{},{}];
- 
-     return (data.map((data)=><DetailsText>Something</DetailsText>))
+export const makeChildFromArray=(datas)=>{
+   
+     return datas.map((d,index)=><DetailsText key={index}>{d}</DetailsText>);
  
  }

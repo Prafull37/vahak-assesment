@@ -5,25 +5,53 @@ import FormContainer from './components/FormContainer';
 import VahakApp from './VahakApp';
 import Header from './components/Header';
 import Banner from './components/Banner';
+import { useDispatch, useSelector } from 'react-redux';
+import {addDetails} from "./redux/action";
+
+const BannerText ={
+  journey:"Place Your Bid (1/4)",
+  price:"Place Your Bid (2/4)",
+  contact:"Place Your Bid (2/4)",
+  otp:"Verify OTP  (3/4)",
+  summary:"Summary and Submit Bid  (4/4)"
+}
+
+const FieldName= {
+  journey:"journey",
+  price:"price",
+  contact:"user",
+}
+
+
 
 function App() {
-  const [count,setCount] = useState(1);
+  const [activeShow,setActiveShow] = useState("journey");
+  const dispatch = useDispatch();
 
-  const updateCount = ()=>{
-    if(count<=4){
-      setCount(count=>count+1)
-    }
+  const updateActiveShow=(value)=>{
+   // console.log("what")
+    setActiveShow(value)
   }
+
+  // const onSubmit=(values,action)=>{
+  //   console.log("Submit");
+  //   dispatch(addDetails(values));
+  // };
+
+  const {state} = useSelector(state=>state);
+  console.log("myState",state);
 
   return (
     <div className="App">
       <Header />
-      <Banner  text={`Place Your Bid (${count}/4)`}/>
+      <Banner  text={BannerText[activeShow]}/>
      <FormContainer
-      name="user">
+      name={FieldName[activeShow]}
+      onSubmit={()=>{}}
+      >
         {
           (formik) =>{
-            return <VahakApp formik = {formik} updateCount={updateCount}/>
+            return <VahakApp formik = {formik} activeShow={activeShow} updateActiveShow={updateActiveShow}/>
           }
         }
       </FormContainer> 
