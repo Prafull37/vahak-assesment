@@ -5,17 +5,15 @@ export default function InfoComponent(props){
     return (
         <div className="info-container">
             <div className="headingContainer">
-                <span className="info-heading">Journey</span>
+                <span className="info-heading">{props.heading}</span>
                 <EditButton onClick={props.onClick}/>
             </div>
             <div className="details-container">
                 <div className="left">
-                    <DetailsText>Something</DetailsText>
-                    <DetailsText>Something</DetailsText>
+                    {props.leftChild}
                 </div>
                 <div className="right">
-                <DetailsText>Something</DetailsText>
-                <DetailsText>Something</DetailsText>
+                {!!props.rightChild && props.rightChild}
                 </div>
             </div>
         </div>

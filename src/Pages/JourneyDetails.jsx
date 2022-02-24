@@ -86,10 +86,7 @@ export default function JourneyDetails(props){
             // }}
             / >
 
-        <Button
-            disabled={true}
-            text="Enter Bid Details"
-        />
+       
     </div>
 
 

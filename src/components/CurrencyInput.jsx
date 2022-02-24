@@ -3,21 +3,21 @@ import "../css/components/currency.css";
 
 export default function CurrencyInput(props){
 
-    const {id,onInputChange,onInputBlur,value,style} = props;
+    const {id,name,onInputChange,onInputBlur,value,style} = props;
 
 
     return (
         <Input
             label={<Rupee fontSize={"72px"} />}
-            name="amount"
+            name={name}
             type="number"
             id={id}
             classes="border-bottom-input"
             labelClasses="currency-label"
             placeholder="0"
-            // onChange={onInputChange}
+            onChange={onInputChange}
             // onBlur={onInputBlur}
-            // value={value}
+            value={value}
             style={style}
             required={false}
         />
