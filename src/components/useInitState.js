@@ -6,6 +6,7 @@ export default function useInitState(name) {
     let dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchDetails(name))
+        //eslint-disable-nextline
     }, [])
     const initState = useSelector((state) => state.vahakDetails);
     return initState;

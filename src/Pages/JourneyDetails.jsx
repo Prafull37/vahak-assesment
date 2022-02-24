@@ -71,7 +71,7 @@ export default function JourneyDetails(props) {
             />
             <Button
                 disabled={!formik.isValid && Object.keys(formik.errors).includes("journey")}
-                text="Enter Bid Details"
+                text={props.buttonLabel}
                 style={{ marginTop: "16px" }}
                 onButtonClick={() => { props.onButtonClick("price") }}
                 type="button"

@@ -40,7 +40,7 @@ export default function Price(props) {
 
         <Button
             disabled={false}
-            text="Enter Bid Details"
+            text={props.buttonLabel}
             style={{ marginTop: "16px" }}
             onButtonClick={() => { props.onButtonClick("contact") }}
             type="button"

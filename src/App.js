@@ -5,7 +5,7 @@ import FormContainer from './components/FormContainer';
 import VahakApp from './VahakApp';
 import Header from './components/Header';
 import Banner from './components/Banner';
-
+import { useCallback } from 'react';
 
 
 const BannerText = {
@@ -27,9 +27,9 @@ const FieldName = {
 function App() {
   const [activeShow, setActiveShow] = useState("journey");
 
-  const updateActiveShow = (value) => {
+  const updateActiveShow =useCallback((value) => {
     setActiveShow(value)
-  }
+  },[])
 
 
   return (

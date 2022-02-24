@@ -61,11 +61,6 @@ export default function Contact(props) {
                     value={formik.values?.contact?.mobileNo || ""}
                     name="contact.mobileNo"
                     checkboxName="contact.updateonwp"
-                    //   validate={(values)=>{
-                    //     if(!values){
-                    //       return "source cannot be empty";
-                    //     }
-                    // }}
                     required={false}
                 />
 
@@ -77,11 +72,6 @@ export default function Contact(props) {
                     value={formik.values?.contact?.name || ""}
                     name="contact.name"
                     wrapperClasses="margin-bottom32"
-                    //   validate={(values)=>{
-                    //     if(!values){
-                    //       return "source cannot be empty";
-                    //     }
-                    // }}
                     required={true}
                 />
 
@@ -92,16 +82,11 @@ export default function Contact(props) {
                     onInputBlur={formik.handleBlur}
                     value={formik.values?.contact?.remarks || ""}
                     name="contact.remarks"
-                    //   validate={(values)=>{
-                    //     if(!values){
-                    //       return "source cannot be empty";
-                    //     }
-                    // }}
                 />
 
                 <Button
                     disabled={!formik.isValid && Object.keys(formik.errors).includes("contact")}
-                    text="Enter Bid Details"
+                    text={props.buttonLabel}
                     style={{ marginTop: "16px" }}
                     onButtonClick={() => { props.onButtonClick("otp")}}
                     type="button"
