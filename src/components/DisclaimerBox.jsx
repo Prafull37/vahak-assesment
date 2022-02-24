@@ -9,7 +9,7 @@ export default function DisclaimerBox(props){
     
      const {name,
         checkboxName,
-        id,checkBoxId,validate,onInputChange,onCheckBoxChange,onInputBlur,onCheckBoxBlur,value,checked,checkboxLabel,classes,style,required,placeholder="",max} = props;
+        id,checkBoxId="checkbox-id",validate,onInputChange,onCheckBoxChange,onInputBlur,onCheckBoxBlur,value,checked,checkboxLabel,classes,style,required,placeholder="",max} = props;
     
     const validation={};
 
@@ -34,7 +34,7 @@ export default function DisclaimerBox(props){
                 max={max}
             />
             <div className="checkbox-background">
-                <Checkbox id="checkboxId" name={checkboxName} onInputChang={onCheckBoxChange}
+                <Checkbox id={checkBoxId} name={checkboxName} onInputChang={onCheckBoxChange}
                     onInputBlur={onCheckBoxBlur}
                     value={checked}
                     label={checkboxLabel}

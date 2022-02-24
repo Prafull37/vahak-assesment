@@ -7,9 +7,8 @@ import Checkbox from "../components/Checkbox";
 import Input from "../components/Input";
 import "../css/pages/contact.css";
 import { useSelector } from "react-redux";
-import { FormikConsumer } from "formik";
 import { useDispatch } from "react-redux";
-import { addDetails, ADD_DETAILS } from "../redux/action";
+import { addDetails } from "../redux/action";
 import Button from '../components/Button';
 
 import DisclaimerBox from "../components/DisclaimerBox";

@@ -3,8 +3,7 @@ import Input from "../components/Input";
 import Select from "../components/Select";
 import "../css/pages/journey.css";
 import Button from "../components/Button";
-import { useSelector, useDispatch } from "react-redux";
-import { useState } from 'react';
+
 
 const optionData = {
     common: {},
@@ -16,8 +15,7 @@ const optionData = {
 export default function JourneyDetails(props) {
 
     const { formik } = props;
-    console.log("formik => ", formik);
-    console.log("formik.values => ", formik.values)
+
     return (<div className="journey">
         <div className="location-container">
             <Input
@@ -29,11 +27,6 @@ export default function JourneyDetails(props) {
                 name="journey.source"
                 wrapperClasses="input-box"
                 classes="location-input"
-                //   validate={(values)=>{
-                //     if(!values){
-                //       return "source cannot be empty";
-                //     }
-                // }}
                 required={true}
             />
 
@@ -42,15 +35,10 @@ export default function JourneyDetails(props) {
                 label="Destination"
                 onInputChange={formik.handleChange}
                 onInputBlur={formik.handleBlur}
-                value={formik.values?.journey?.destination|| ""}
+                value={formik.values?.journey?.destination || ""}
                 name="journey.destination"
                 wrapperClasses="input-box"
                 classes="location-input"
-                //   validate={(values)=>{
-                //     if(!values){
-                //       return "source cannot be empty";
-                //     }
-                // }}
                 required={true}
             />
         </div>
@@ -59,18 +47,12 @@ export default function JourneyDetails(props) {
                 id={"cartype"}
                 label="Car Type"
                 onInputChange={(e) => {
-                    console.log(e);
                     formik.handleChange(e)
                 }}
                 onInputBlur={formik.handleBlur}
-                value={formik.values?.journey?.cartype|| ""}
+                value={formik.values?.journey?.cartype || ""}
                 name="journey.cartype"
                 classes="select-class"
-                //   validate={(values)=>{
-                //     if(!values){
-                //       return "source cannot be empty";
-                //     }
-                // }}
                 optionData={optionData}
                 required={true}
             />
@@ -87,13 +69,13 @@ export default function JourneyDetails(props) {
                 classes="travellers"
                 validate={(values) => validateTravellers(formik.values?.journey?.cartype, values)}
             />
-        <Button
-            disabled={!formik.isValid && Object.keys(formik.errors).includes("journey")}
-            text="Enter Bid Details"
-            style={{marginTop:"16px"}}
-            onButtonClick={()=>{props.onButtonClick("price")}}
-            type="button"
-        />
+            <Button
+                disabled={!formik.isValid && Object.keys(formik.errors).includes("journey")}
+                text="Enter Bid Details"
+                style={{ marginTop: "16px" }}
+                onButtonClick={() => { props.onButtonClick("price") }}
+                type="button"
+            />
 
         </div>
 

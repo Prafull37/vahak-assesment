@@ -1,10 +1,9 @@
 import Input from "./Input";
 import "../css/components/currency.css";
 
-export default function CurrencyInput(props){
+export default function CurrencyInput(props) {
 
-    const {id,name,onInputChange,onInputBlur,value,style} = props;
-    console.log(props.onInputChange);
+    const { id, name, onInputChange, onInputBlur, value, style } = props;
 
     return (
         <Input
@@ -16,7 +15,7 @@ export default function CurrencyInput(props){
             labelClasses="currency-label"
             placeholder="0"
             onInputChange={onInputChange}
-             onInputBlur={onInputBlur}
+            onInputBlur={onInputBlur}
             value={value}
             style={style}
             required={false}
@@ -24,7 +23,7 @@ export default function CurrencyInput(props){
     )
 }
 
-export function Rupee(props){
-    return <span style={{fontSize:props.fontSize,fontWeight:"bold"}}>₹
-    {!!props.label &&props.label}</span>
+export function Rupee(props) {
+    return <span style={{ fontSize: props.fontSize, fontWeight: "bold" }}>₹
+        {!!props.label && props.label}</span>
 }

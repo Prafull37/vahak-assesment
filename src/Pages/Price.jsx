@@ -9,13 +9,13 @@ import Button from "../components/Button";
 export default function Price(props) {
     const { formik } = props;
     const state = useSelector(state => state.vahakDetails)
-    const {journey} = state;
-    const data = [`${journey.source}-${journey.destination}` , `${!!journey.noofTravellers?Number(journey.noofTravellers )+" Persons":"0 Persons"} , ${journey.cartype}`];
+    const { journey } = state;
+    const data = [`${journey.source}-${journey.destination}`, `${!!journey.noofTravellers ? Number(journey.noofTravellers) + " Persons" : "0 Persons"} , ${journey.cartype}`];
 
     return (<div>
         <InfoComponent
             heading="Journey"
-            onClick={() => { props.onButtonClick("journey")}}
+            onClick={() => { props.onButtonClick("journey") }}
             leftChild={makeChildFromArray(data)}
         />
         <Divider hide={false} />
@@ -42,7 +42,7 @@ export default function Price(props) {
             disabled={false}
             text="Enter Bid Details"
             style={{ marginTop: "16px" }}
-            onButtonClick={() => { props.onButtonClick("contact")}}
+            onButtonClick={() => { props.onButtonClick("contact") }}
             type="button"
         />
     </div>)
