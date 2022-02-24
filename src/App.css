@@ -2,6 +2,7 @@
   position:relative;
   top:0;
   left:0;
+  width:100%;
 }
 
 .input-wrapper .input,
@@ -9,6 +10,7 @@
   border-radius: 8px;
   padding:12px;
   border:1px solid rgb(158, 149, 149);
+  width:100%;
 }
 
 
@@ -25,4 +27,15 @@
   font-size: 14px;
   color:#0069d9;
   cursor: pointer;
+}
+
+.container{
+  width:100%;
+}
+
+@media only screen and (min-width:768px){
+  .container{
+    width:60%;
+    margin:0 auto;
+  }
 }

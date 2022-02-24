@@ -8,7 +8,7 @@ export default function Input(props){
     const inputClass = !!classes ? classes:"";
 
     return (
-        <div className={`input-wrapper ${props.wrapperClasses}`}>
+        <div className={`input-wrapper ${props.wrapperClasses || ""}`}>
             <label htmlFor={props.id}
             className={`label ${props.labelClasses || ""}`}>{props.label}{required?<span className="star">*</span>:""}</label>
             <Field 
@@ -29,19 +29,3 @@ export default function Input(props){
     )
 }
 
-/**
- * <Input 
-              id={"source"}
-              label="Source Location"
-              onInputChange={formik.handleChange}
-              onInputBlur={(e)=>{console.log(e);formik.handleBlur(e)}}
-              value={formik.values.journey.source}
-              name="journey.source"
-              validate={(values)=>{
-                if(!values){
-                  return "source cannot be empty";
-                }
-            }}
-            required={true}
-            / >
- */

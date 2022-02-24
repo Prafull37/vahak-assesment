@@ -1,0 +1,67 @@
+
+.journey{
+    width: 100%;
+}
+
+.location-container,.normal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:100%;
+}
+
+.input-box{
+    width: 94%;
+    margin: 16px 0;
+}
+
+.normal{
+    margin:0px;
+    margin-top:14px;
+}
+
+.normal > div{
+    margin-top:24px;
+}
+
+.travellers{
+    width: 95% !important;
+}
+
+.normal .button{
+    margin-top:25px;
+}
+
+.select-class{
+    width:103% !important;
+}
+
+@media only screen and (min-width:768px) {
+    .location-container{
+       
+        flex-direction: row;
+        width:100%;
+    }
+
+    .input-box{
+        width:50%;
+        margin:0;
+    }
+
+    .location-input{
+        width:80% !important;
+    }
+
+    .normal{
+        width:95%;
+    }
+
+    .select-wrapper{
+        width:100%;
+    }
+
+    .select-class{
+        width:99% !important;
+    }
+    
+}

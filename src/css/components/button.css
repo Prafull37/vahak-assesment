@@ -1,10 +1,11 @@
 .button{
-    width:100%;
+    width:95%;
     cursor: pointer;
     border-radius: 8px;
     font-size: 14px;
     padding:16px;
     font-weight: 500;
+    margin: 0 auto;
 }
 
 .button-active{
