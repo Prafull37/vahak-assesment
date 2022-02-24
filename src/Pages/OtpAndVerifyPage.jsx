@@ -16,24 +16,24 @@ export default function OtpAndVerifyPage(props){
     return (<div>
         <InfoComponent
                 heading= "Journey"
-                onClick={()=>{}}
+                onClick={() => { props.onButtonClick("journey")}}
                 leftChild = {makeChildFromArray(data1)}
             />
          <Divider hide={false}/>
          <InfoComponent
                 heading= "Bid Details"
-                onClick={()=>{}}
+                onClick={() => { props.onButtonClick("price")}}
                 leftChild = {makeChildFromArray(data2)}
                 rightChild={ <Rupee label={price.amount} fontSize={"32px"} />}
             />
             <Divider hide={false}/>
             {props.showOtp && (
                 <ReactOtp 
-                title={<TitleText mobileNo="123232232" onClick={()=>{}}/>}
+                title={<TitleText mobileNo="123232232" onClick={() => { props.onButtonClick("contact")}}/>}
                 validateAndSubmit={(otp)=>{
                     console.log("adas",otp)
                     if(Number(otp)===1234) {
-                    props.onButtonClick()
+                    props.onButtonClick("summary")
                     }
                 }}
                 />
@@ -42,7 +42,7 @@ export default function OtpAndVerifyPage(props){
             disabled={false}
             text="Enter Bid Details"
             style={{ marginTop: "16px" }}
-            onButtonClick={props.onButtonClick}
+            onButtonClick={() => { props.onButtonClick(props.showOtp?"summary":"success")}}
             type="button"
              />
     </div>)

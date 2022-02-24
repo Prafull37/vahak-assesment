@@ -14,18 +14,26 @@ export default function VahakApp(props){
         console.log(value);
         const formData=formik.values[show]
         console.log(formData); 
-        dispatch(addDetails({[show]:{...formData}}))
+        dispatch(addDetails({[show]:{...formData}}));
         props.updateActiveShow(value)
     }
 
     //console.log(props.activeShow)
     return (<div className="container">
         
-        {show==="journey" && <JourneyDetails formik={formik} onButtonClick={()=>moveToPage("price")} />}
-        {show==="price" && <Price formik={formik} onButtonClick={(value)=>moveToPage(value||"contact")} />}
-        {show==="contact" && <Contact formik={formik} onButtonClick={(value)=>moveToPage(value||"otp")} />}
-        {show==="otp" && <OtpAndVerifyPage formik={formik} onButtonClick={(value)=>moveToPage(value||"summary")} showOtp={true} />}
-        {show==="summary" && <OtpAndVerifyPage formik={formik} onButtonClick={(value)=>alert("Value Submitted")} showOtp={false} />}
+        {show==="journey" && <JourneyDetails formik={formik} onButtonClick={(value)=>moveToPage(value)} />}
+        {show==="price" && <Price formik={formik} onButtonClick={(value)=>moveToPage(value)} />}
+        {show==="contact" && <Contact formik={formik} onButtonClick={(value)=>moveToPage(value)} />}
+        {show==="otp" && <OtpAndVerifyPage formik={formik} onButtonClick={(value)=>moveToPage(value)} showOtp={true} />}
+        {show==="summary" && <OtpAndVerifyPage formik={formik} onButtonClick={(value)=>{
+            if(value === "success"){
+                alert("Value Submitted")
+            }else{
+                moveToPage(value)
+            }
+            }} showOtp={false} />}
        
     </div>)
 }
+
+

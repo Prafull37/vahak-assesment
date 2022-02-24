@@ -23,7 +23,7 @@ export default function Contact(props) {
         <>
             <InfoComponent
                 heading="Journey"
-                onClick={() => { }}
+                onClick={() => { props.onButtonClick("journey")}}
                 leftChild={makeChildFromArray(data)}
             />
             <Divider hide={false} />
@@ -103,7 +103,7 @@ export default function Contact(props) {
                     disabled={false}
                     text="Enter Bid Details"
                     style={{ marginTop: "16px" }}
-                    onButtonClick={props.onButtonClick}
+                    onButtonClick={() => { props.onButtonClick("otp")}}
                     type="button"
                 />
             </div>

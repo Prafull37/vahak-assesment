@@ -91,7 +91,7 @@ export default function JourneyDetails(props) {
             disabled={false}
             text="Enter Bid Details"
             style={{marginTop:"16px"}}
-            onButtonClick={props.onButtonClick}
+            onButtonClick={()=>{props.onButtonClick("price")}}
             type="button"
         />
 
