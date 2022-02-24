@@ -5,7 +5,7 @@
     padding:0px  !important;
     width: 150px !important;
     border-radius: 0 !important;
-    vertical-align: middle;
+    vertical-align: super;
 }
 
 .border-bottom-input:active,

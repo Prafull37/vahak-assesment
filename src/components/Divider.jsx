@@ -1,3 +1,4 @@
 export default function Divider(props){
-    return <hr style={{margin:"16px 0",borderTop:props.hide? "none":"1px solid rgba(0,0,0,0.5)"}}/>
+    const border = props.hide ? {border:"none"} :{borderTop:"1px solid rgba(0,0,0,0.5)"}
+    return <hr style={{margin:"16px 0",...border}}/>
 } 
