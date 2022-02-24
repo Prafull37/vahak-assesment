@@ -88,7 +88,7 @@ export default function JourneyDetails(props) {
                 validate={(values) => validateTravellers(formik.values?.journey?.cartype, values)}
             />
         <Button
-            disabled={false}
+            disabled={!formik.isValid && Object.keys(formik.errors).includes("journey")}
             text="Enter Bid Details"
             style={{marginTop:"16px"}}
             onButtonClick={()=>{props.onButtonClick("price")}}

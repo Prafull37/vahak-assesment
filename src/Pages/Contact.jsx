@@ -12,6 +12,8 @@ import { useDispatch } from "react-redux";
 import { addDetails, ADD_DETAILS } from "../redux/action";
 import Button from '../components/Button';
 
+import DisclaimerBox from "../components/DisclaimerBox";
+
 export default function Contact(props) {
     const dispatch = useDispatch();
     const { formik } = props;
@@ -20,7 +22,7 @@ export default function Contact(props) {
     const { journey, price } = state;
     const data = [`${journey.source}-${journey.destination}` , `${!!journey.noofTravellers?Number(journey.noofTravellers )+" Persons":"0 Persons"} , ${journey.cartype}`];
     return (
-        <>
+        <div className="contact">
             <InfoComponent
                 heading="Journey"
                 onClick={() => { props.onButtonClick("journey")}}
@@ -48,34 +50,34 @@ export default function Contact(props) {
             <Divider />
 
             <div>
-                <Input
+                <DisclaimerBox
                     id={"Mobile No"}
                     label="Mobile No"
+                    checkboxLabel="Get Updates on Whatsappasd"
                     onInputChange={formik.handleChange}
-                    //onInputBlur={(e)=>{console.log(e);formik.handleBlur(e)}}
+                    onCheckBoxChange ={formik.handleChange}
+                    onCheckBoxBlur ={formik.handleBlur}
+                    checked ={formik.values?.contact?.updateonwp || false}
+                    onInputBlur={formik.handleBlur}
                     value={formik.values?.contact?.mobileNo || ""}
                     name="contact.mobileNo"
-
+                    checkboxName="contact.updateonwp"
                     //   validate={(values)=>{
                     //     if(!values){
                     //       return "source cannot be empty";
                     //     }
                     // }}
-
-                    middleComponent={<DisclaimerBox name="contact.updateonwp" onInputChange={formik.handleChange}
-                        onInputBlur={formik.onInputBlur}
-                        value={formik.values?.contact?.updateonwp || false} />}
-                    required={true}
+                    required={false}
                 />
 
                 <Input
                     id={"name"}
                     label="Name"
                     onInputChange={formik.handleChange}
-                    //onInputBlur={(e)=>{console.log(e);formik.handleBlur(e)}}
+                    onInputBlur={formik.handleBlur}
                     value={formik.values?.contact?.name || ""}
                     name="contact.name"
-                    style={{ marginBottom: "32px" }}
+                    wrapperClasses="margin-bottom32"
                     //   validate={(values)=>{
                     //     if(!values){
                     //       return "source cannot be empty";
@@ -88,7 +90,7 @@ export default function Contact(props) {
                     id={"remarks"}
                     label="Remarks"
                     onInputChange={formik.handleChange}
-                    //onInputBlur={(e)=>{console.log(e);formik.handleBlur(e)}}
+                    onInputBlur={formik.handleBlur}
                     value={formik.values?.contact?.remarks || ""}
                     name="contact.remarks"
                     //   validate={(values)=>{
@@ -96,11 +98,10 @@ export default function Contact(props) {
                     //       return "source cannot be empty";
                     //     }
                     // }}
-                    required={true}
                 />
 
                 <Button
-                    disabled={false}
+                    disabled={!formik.isValid && Object.keys(formik.errors).includes("contact")}
                     text="Enter Bid Details"
                     style={{ marginTop: "16px" }}
                     onButtonClick={() => { props.onButtonClick("otp")}}
@@ -108,16 +109,9 @@ export default function Contact(props) {
                 />
             </div>
 
-        </>)
+        </div>)
 
 }
 
-export const DisclaimerBox = (props) => {
-    return (<div className="disclaimer-box" >
-        <Checkbox name={props.name} onInputChange={props.handleChange} value={props.value}
-            onInputChange={props.onInputChange}
-            onInputBlur={props.onInputBlur}
-            label="Get Updates on Whatsapp" />
-    </div>)
-}
+
 

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import {Form, Formik} from 'formik';
+import * as Yup from 'yup';
 import useInitState from "./useInitState";
 import "../css/components/formcontainer.css";
+import validationSchema from "../validation/main";
 
 export default function FormContainer(props){
     const initState= useInitState(props.name);
@@ -12,6 +14,8 @@ export default function FormContainer(props){
             initialValues={initState}
             onSubmit={onSubmit}
             enableReinitialize
+            validationSchema={validationSchema}
+            validateOnMount
         >
             {(formik)=><Form>
                 <div className="form-wrapper">

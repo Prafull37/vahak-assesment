@@ -1,0 +1,22 @@
+.disclaimer{
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.5);
+    width: 95%;
+    position: relative;
+    top:0;
+    left:0;
+    margin-bottom:32px;
+}  
+
+.disclaimer .input{
+    border:none;
+
+}
+
+.disclaimer .checkbox-background{
+    background-color: #ebebec;
+    padding:8px;
+    border-top:1px solid rgba(0,0,0,0.5);
+    overflow:hidden;
+    border-radius: 8px;
+}

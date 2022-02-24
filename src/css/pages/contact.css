@@ -1,4 +1,5 @@
 
+
 .disclaimer-box{
     background:rgb(206, 200, 200);
     border:1px solid black ;
@@ -7,4 +8,12 @@
     color:white;
     width:106%;
     margin-bottom:32px;
+}
+
+.margin-bottom32{
+    margin-bottom: 32px;
+}
+
+.input-wrapper .input{
+    width:90%;
 }
