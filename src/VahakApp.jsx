@@ -11,7 +11,7 @@ const ButtonText={
     price:"Next",
     contact:"Verify Via OTP",
     otp:"Verify Via OTP",
-    summar :"Submit Bid"
+    summary :"Submit Bid"
 }
 
  function VahakApp(props) {
