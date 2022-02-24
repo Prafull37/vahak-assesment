@@ -25,5 +25,6 @@ export default function CurrencyInput(props){
 }
 
 export function Rupee(props){
-    return <span style={{fontSize:props.fontSize,fontWeight:"bold"}}>₹</span>
+    return <span style={{fontSize:props.fontSize,fontWeight:"bold"}}>₹
+    {!!props.label &&props.label}</span>
 }

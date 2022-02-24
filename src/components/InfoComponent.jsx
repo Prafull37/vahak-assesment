@@ -31,3 +31,11 @@ export const EditButton=(props)=>{
         <span className="edit-button" onClick={props.onClick}><i className="fa fa-pencil"></i> Edit</span>
     )
 }
+
+
+export const makeChildFromArray=(props)=>{
+    let data=[{},{}];
+ 
+     return (data.map((data)=><DetailsText>Something</DetailsText>))
+ 
+ }

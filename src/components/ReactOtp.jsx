@@ -28,6 +28,8 @@ export default function ReactOtp(props){
         disabled={false} 
         secure
         inputStyles={{
+            marginLeft:"24px",
+            marginRight:"12px",
             border: 0,
             borderBottom: "1px solid #cbcbcb",
         }}

@@ -1,0 +1,11 @@
+1.) Data Handling With Redux Per Page;
+    - Journey
+        - on Click of Button Send all the data to redux store
+2.) InterPage communication 
+3.) Parent To CHild communication
+        - If all condition Satisfied then enable the Buton
+4.) Retrieving Saved Data from Redux
+5.) Field Level Validation
+    - Journey 
+        -If Suv Selected then No of travellers cannot be more than 4 and for rest 6.
+6.) Page Level Validation

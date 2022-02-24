@@ -1,5 +1,5 @@
 
-import InfoComponent,{DetailsText}from "../components/InfoComponent"
+import InfoComponent,{makeChildFromArray}from "../components/InfoComponent"
 import Divider from "../components/Divider";
 import CurrencyInput from "../components/CurrencyInput";
 import Checkbox from "../components/Checkbox";
@@ -35,9 +35,3 @@ export default function Price(props){
     </div>)
 }
 
-const makeChildFromArray=(props)=>{
-   let data=[{},{}];
-
-    return (data.map((data)=><DetailsText>Something</DetailsText>))
-
-}

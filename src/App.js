@@ -20,7 +20,7 @@ function App() {
       <Header />
       <Banner  text={`Place Your Bid (${count}/4)`}/>
      <FormContainer
-      name="journey">
+      name="user">
         {
           (formik) =>{
             return <VahakApp formik = {formik} updateCount={updateCount}/>
